@@ -8,6 +8,9 @@ dotenv.config()
 const app = express()
 const PORT = process.env.PORT || 5001
 connectDB();
+
+// middleware
+app.use(express.json())
 app.use("/api/notes", notesRoutes);
 
 // An endpoint is a combination of url + http method that lets the client
