@@ -36,10 +36,12 @@ const HomePage = () => {
     {isRateLimited && <RateLimitedUI />}
     <div>
         {loading && <div>Loading notes...</div>}
+
+        {/* {notes.length == 0 && !isRateLimited && <NotesNotFound />} */}
         {notes.length > 0 && !isRateLimited && (
             <div>
                 {notes.map(note => (
-                    <NoteCard key={note._id} note={note} />
+                    <NoteCard key={note._id} note={note} setNotes={setNotes} />
                 ))}
             </div>
         )}

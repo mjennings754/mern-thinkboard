@@ -55,7 +55,7 @@ const CreatePage = () => {
           />
         </div>
         <div>
-          <label><span>Title</span></label>
+          <label><span>Description</span></label>
           <textarea
           placeholder="Write your note here..."
           value={content}
